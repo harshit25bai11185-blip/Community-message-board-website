@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row mb-4">
+    <div class="col text-center">
+        <h2 class="mb-3 text-muted">Community Message Board</h2>
+        <a href="{{ url_for('create') }}" class="btn btn-primary btn-lg px-4 rounded-pill">
+            + Create New Chat
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    {% for chat in chats %}
+    <div class="col-md-6 col-lg-4">
+        <div class="card chat-card">
+            <div class="card-header">
+                From: {{ chat.sender }}
+            </div>
+            
+            <div class="card-body msg-body">
+                "{{ chat.message }}"
+            </div>
+
+            <div class="card-footer d-flex justify-content-between align-items-center">
+                <span>To: {{ chat.receiver }}</span>
+                
+                <div>
+                    <a href="{{ url_for('edit', id=chat.id) }}" class="btn btn-sm btn-outline-primary">Edit</a>
+                    <a href="{{ url_for('delete', id=chat.id) }}" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this note?')">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="col-12 text-center mt-5">
+        <p class="text-muted">No messages yet. Be the first to say hello!</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

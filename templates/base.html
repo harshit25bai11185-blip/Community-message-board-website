@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kindred Connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f7f6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: #6c5ce7; 
+        }
+        .btn-primary {
+            background-color: #6c5ce7;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #5b4bc4;
+        }
+        .chat-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+            background: white;
+            overflow: hidden;
+        }
+        .chat-card:hover {
+            transform: translateY(-3px);
+        }
+        .card-header {
+            background-color: #a29bfe;
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+        .card-footer {
+            background-color: #dfe6e9;
+            color: #2d3436;
+            font-weight: bold;
+            border: none;
+        }
+        .msg-body {
+            font-size: 1.1rem;
+            padding: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="/">Kindred Connect</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>
