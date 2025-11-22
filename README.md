@@ -44,10 +44,9 @@ Note: The database file chats.db is automatically created via db.create_all() if
        description: GET: fetches chats by their specific ids and removes it from the database
        operation: DELETE
 
---> Fromtend templates:
+--> Frontend templates:
 base.html: cotains <head> bootstrap data and CDN links and defines the global css styling.
            uses {% block content %} to allow other pages to inject their content.
 index.html: Inherits from base.html. Uses a Jinja2 {% for chat in chats %} loop to generate a                card for every message found in the database. Includes logic to display a specific              "No messages" view if the database is empty.
-
 create.html: Inherits from base.html. Acts as a dual-purpose page. It checks {% if chat %} to                 decide whether to display "Edit Message" (pre-filling inputs with existing data) or              "Compose Message" (empty inputs).
 
