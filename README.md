@@ -10,14 +10,14 @@ feontend: HTML, CSS, BOOTSTRAP
 
 # project structure
  simple_chat/
-│
-├── app.py               # Main application entry point and backend logic
-├── chats.db             # SQLite database (auto-generated on first run)
-├── README.md            # Project documentation
-└── templates/           # HTML templates for the frontend
-    ├── base.html        # Base template containing the HTML skeleton & CSS
-    ├── index.html       # Home page displaying the list of chats (Read)
-    └── create_edit.html # Form page for adding (Create) and editing (Update) chats
+   app.py               # Main application entry point and backend logic
+   chats.db             # SQLite database (auto-generated on first run)
+   README.md            # Project documentation
+   
+ templates/           # HTML templates for the frontend
+    base.html        # Base template containing the HTML skeleton & CSS
+    index.html       # Home page displaying the list of chats (Read)
+    create_edit.html # Form page for adding (Create) and editing (Update) chats
 
 # code documentation
 --> Database Model:
